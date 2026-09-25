@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>המדריך המלא: טיול קראוון קליפורניה 2026</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #047857;
+            --accent: #d97706;
+            --bg: #f3f4f6;
+            --text: #1f2937;
+            --light-bg: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2px;
+            font-size: 1.8em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        details.day-card {
+            background: var(--light-bg);
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+        }
+        details.day-card > summary {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            font-size: 1.15em;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        details.day-card > summary::-webkit-details-marker { display: none; }
+        details.day-card > summary::after { content: '▼'; font-size: 0.8em; }
+        details.day-card[open] > summary::after { content: '▲'; }
+        
+        .content { padding: 15px; }
+        
+        .schedule-item {
+            border-right: 4px solid var(--secondary);
+            padding-right: 15px;
+            margin-bottom: 35px;
+        }
+        .time-block {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.15em;
+            margin-bottom: 8px;
+        }
+        .time-block .clock {
+            background: #e0e7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 10px;
+            color: #3730a3;
+        }
+        
+        figure {
+            margin: 12px 0;
+            padding: 0;
+        }
+        .stop-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #e5e7eb;
+        }
+        figcaption {
+            font-size: 0.75em;
+            color: #9ca3af;
+            text-align: right;
+            margin-top: 4px;
+            direction: ltr;
+        }
+
+        .google-map {
+            width: 100%;
+            height: 280px;
+            border: 0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        details.info-box {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            margin-top: 15px;
+            padding: 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+        details.info-box > summary {
+            padding: 12px;
+            color: #1e40af;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            list-style: none;
+            background-color: #e0e7ff;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+        details.info-box > summary:hover { background-color: #c7d2fe; }
+        details.info-box > summary::before { content: '📖 מידע נוסף וטיפים'; }
+        details.info-box[open] > summary::before { content: '📖 סגור'; }
+        
+        .info-content {
+            padding: 15px;
+            font-size: 0.95em;
+            color: #334155;
+        }
+        .info-content h4 {
+            color: var(--accent);
+            margin-top: 15px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 3px;
+        }
+        .info-content p { margin-top: 0; }
+        
+        .parking-tip {
+            background-color: #fffbeb;
+            border-right: 4px solid #fbbf24;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .checklist-group { margin-bottom: 20px; }
+        .checklist-group h3 {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+            cursor: pointer;
+        }
+        .check-item input[type="checkbox"] {
+            margin-left: 12px;
+            margin-top: 4px;
+            transform: scale(1.4);
+            accent-color: var(--secondary);
+        }
+        .check-item div {
+            display: flex;
+            flex-direction: column;
+        }
+        .check-item span.qty {
+            font-size: 0.85em;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>קליפורניה 🚐 2026</h1>
+    <div class="subtitle">המדריך המלא: 8–15 באוקטובר | שמעון, יערה, אריה וליאו</div>
+
+    <h2 style="text-align: center; color: var(--secondary);">מפת המסלול הכללית</h2>
+    <iframe class="google-map" src="https://maps.google.com/maps?saddr=San+Carlos,+CA&daddr=Indian+Flat+RV+Park,+CA+to:Yosemite+Valley,+CA+to:Monterey,+CA+to:Big+Sur,+CA+to:Capitola,+CA+to:Half+Moon+Bay,+CA&output=embed"></iframe>
+
+    <details class="day-card">
+        <summary>יום 1 (8/10): יציאה והצטיידות 🛒</summary>
+        <div class="content">
+            <iframe class="google-map" src="https://maps.google.com/maps?saddr=San+Carlos,+CA&daddr=Indian+Flat+RV+Park,+El+Portal,+CA&output=embed"></iframe>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">13:00</span> <span class="title">איסוף ה-RV בסן קרלוס</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/K3G22B5.jpg" alt="RV">
+                    <figcaption>Photo: Wikimedia Commons / CC BY-SA 3.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>מה בדיוק בודקים בתחנה?</h4>
+                        <p>האיסוף לוקח לרוב בין שעה לשעתיים. אל תמהרו. ודאו שנציג החברה מראה לכם איך מפעילים את לוח הבקרה (משאבת מים, דוד מים חמים, בדיקת מפלס סוללה). בקשו לראות איפה נמצא צינור הביוב (Sewer Hose) ואיך מחברים אותו.</p>
+                        <h4>מושב הבטיחות של אריה:</h4>
+                        <p>הדונה שלכם צריכה להירתם לפינת האוכל (Dinette). ודאו יחד עם הנציג שיש שם חגורות בטיחות מתאימות ושזה מעוגן היטב לפני שמתחילים לנסוע.</p>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">14:00</span> <span class="title">Walmart Supercenter</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/8Qp2wFj.jpg" alt="Walmart">
+                    <figcaption>Photo: Wikimedia Commons / CC BY-SA 4.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>איך קונים עם קראוון?</h4>
+                        <p>זו תהיה הנסיעה הראשונה שלכם בכלי גדול. כשאתם מגיעים לוולמארט, אל תחפשו חניה קרובה לכניסה! סעו לקצה הרחוק ביותר של מגרש החניה (איפה שחונים משאיות או רכבים בודדים), וחנו לרוחב של שתי חניות כדי שיהיה לכם קל לצאת. פצלו כוחות: אחד נשאר עם אריה וליאו בקראוון, והשני נכנס עם עגלה ומחסל את רשימת הקניות שלמטה.</p>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">15:30</span> <span class="title">נסיעה ל-Indian Flat</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/71oX3L7.jpg" alt="El Portal">
+                    <figcaption>Photo: Miguel Vieira / CC BY 2.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>הדרך וההגעה</h4>
+                        <p>הנסיעה תתחיל על כבישים מהירים, וכשתתקרבו ל-El Portal תעלו על Highway 140 (El Portal Rd). זהו כביש יפהפה שמתפתל צמוד לנהר המרסד (Merced River). סעו לאט, הכביש מפותל. החניון, Indian Flat RV Park, יושב ממש על הנהר.</p>
+                        <h4>מה עושים כשמגיעים?</h4>
+                        <p>גשו למשרד הקבלה (או לעמדת הצ'ק-אין העצמי אם הגעתם מאוחר). תופנו לחלקה שלכם. יש לחבר את כבל החשמל (ה-RV שלכם כנראה דורש 30 Amp) ואת צינור המים הנקיים. זו ההזדמנות לארוחת ערב ראשונה בטבע, ולהכין את התיקים למחר.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </details>
+
+    <details class="day-card">
+        <summary>יום 2 (9/10): יוסמיטי - טעימה מעוצמה ⛰️</summary>
+        <div class="content">
+            <iframe class="google-map" src="https://maps.google.com/maps?saddr=Indian+Flat+RV+Park,+CA&daddr=Yosemite+Valley,+CA+to:Tunnel+View,+CA+to:Laguna+Seca+Recreation+Area,+CA&output=embed"></iframe>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">07:00</span> <span class="title">כניסה לעמק יוסמיטי</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/02E394N.jpg" alt="Yosemite Valley">
+                    <figcaption>Photo: Chensiyuan / CC BY-SA 4.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>למה כל כך מוקדם?</h4>
+                        <p>באוקטובר אין צורך להזמין כרטיס כניסה מראש, אבל יום שישי בבוקר עדיין מביא עומס מבקרים. הגעה מוקדמת מבטיחה לכם חניה מסודרת לקראוון בעמק, בלי לבזבז זמן על סיבובים. משלמים 35$ בשער באשראי.</p>
+                        <div class="parking-tip">
+                            <strong>💡 חניית הקראוון ביוסמיטי:</strong> סעו ישירות לחניון המרכזי <strong>Yosemite Village Parking</strong>. יש שם אזור ייעודי שמסומן ל-RV ואוטובוסים. אם הוא מלא, האופציה השנייה היא <strong>Yosemite Valley Lodge</strong>. מרגע שחניתם – אל תזיזו את הרכב! העמק בנוי להליכה ולתחבורה ציבורית פנימית (שאטלים חינמיים).
+                        </div>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">08:00</span> <span class="title">טיול בוקר: מפל יוסמיטי ו-Cook's Meadow</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/83pL60B.jpg" alt="Yosemite Falls">
+                    <figcaption>Photo: Daniel Schwen / CC BY-SA 4.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>מה עושים כאן?</h4>
+                        <p>המסלול הזה מושלם לעגלה, לליאו (כלבים מורשים בשבילים הסלולים בעמק) ולחימום בוקר. מתחילים בהליכה של כ-1.5 ק"מ הלוך-חזור אל <strong>Lower Yosemite Fall</strong>. גם אם באוקטובר המפל חלש או יבש, קירות הגרניט האדירים בגובה מאות מטרים שסוגרים עליכם הם חוויה עוצרת נשימה. משם ממשיכים בהליכה קצרה ל-<strong>Cook's Meadow</strong>, אחו פתוח באמצע העמק שמספק את זווית הצילום הקלאסית ביותר עם קיר "חצי כיפה" (Half Dome) ברקע.</p>
+                        <p><strong>ארוחת צהריים:</strong> חזרו לקראוון סביב 11:30, הכינו ארוחת צהריים נוחה ותנו לאריה לנוח קצת.</p>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">13:00</span> <span class="title">תצפית המנהרה ונסיעה למונטריי</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/W2W9O1R.jpg" alt="Tunnel View">
+                    <figcaption>Photo: David Iliff / CC BY-SA 3.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>Tunnel View</h4>
+                        <p>כשאתם יוצאים מהעמק, נווטו את הקראוון אל כביש 41 (Wawona Road). רגע לפני הכניסה למנהרה, תראו משמאלכם ומימינכם את התצפית. הנוף משם כולל את אל קפיטן, מפל הינומת הכלה והעמק כולו נפרש קדימה.</p>
+                        <div class="parking-tip">
+                            <strong>💡 חניה ב-Tunnel View:</strong> יש שני מגרשי חניה משני צדי הכביש. המגרש מצד ימין (קרוב יותר למנהרה) רחב יותר ולרוב קל יותר לעמוד בו עם RV למספר דקות של צילום.
+                        </div>
+                        <h4>נסיעה ללגונה סקה:</h4>
+                        <p>היציאה ב-13:00 היא קריטית. הנסיעה מאזור יוסמיטי ללגונה סקה תיקח סביב 5 שעות בקראוון. אתם רוצים להגיע להתמקמות בבסיס הקבוע שלכם (ל-4 לילות) כשיש עדיין אור יום.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </details>
+
+    <details class="day-card">
+        <summary>יום 3 (10/10): עולם המים של מונטריי 🐠</summary>
+        <div class="content">
+            <iframe class="google-map" src="https://maps.google.com/maps?saddr=Laguna+Seca+Recreation+Area,+CA&daddr=Monterey+Bay+Aquarium,+CA&output=embed"></iframe>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">09:30</span> <span class="title">האקווריום של מונטריי</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/97y40Jj.jpg" alt="Monterey Aquarium">
+                    <figcaption>Photo: Fred Hsu / CC BY-SA 3.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <div class="parking-tip">
+                            <strong>💡 איפה חונים?</strong> מונטריי בעייתית לרכבים ארוכים. אל תיכנסו עם ה-RV לרחוב של האקווריום. סעו ל-<strong>San Carlos Beach / Breakwater Cove Marina Parking</strong> או לחניוני העיר הראשיים (Municipal Lots) שמציעים מקומות מסומנים לאוטובוסים/RV. משם זו הליכה נעימה מאוד לאורך הטיילת עד לאקווריום.
+                        </div>
+                        <h4>מה עושים באקווריום?</h4>
+                        <p>האקווריום הזה ממוקד בחיים הימיים של קליפורניה. עבור אריה (בת שנה ו-7 חודשים), המקומות המרתקים ביותר יהיו:</p>
+                        <ul>
+                            <li><strong>יער הקלפ (Kelp Forest):</strong> אקווריום של 3 קומות המדמה את האצות מול החוף.</li>
+                            <li><strong>Splash Zone:</strong> אזור אינטראקטיבי המיועד בדיוק לגיל הרך, עם פינגווינים ומשחקי מים.</li>
+                            <li><strong>Touch Pools:</strong> בריכות רדודות שבהן ניתן לגעת בעדינות בכוכבי ים ומלפפוני ים.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">13:30</span> <span class="title">Cannery Row וטיילת מונטריי</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/B9B1Z0m.jpg" alt="Cannery Row">
+                    <figcaption>Photo: Jim G / CC BY 2.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>זמן משפחה רגוע</h4>
+                        <p>האזור שסביב האקווריום היה פעם מרכז תעשיית שימורי הסרדינים העולמית (כפי שתיאר הסופר ג'ון סטיינבק). כיום זהו רחוב צבעוני מלא במסעדות פירות ים, חנויות מזכרות ובתי קפה. תוכלו לאכול שם ארוחת צהריים ולהסתובב בנחת עם העגלה לאורך ה-Monterey Bay Coastal Recreation Trail. תוכלו גם לצעוד עד לרציף הישן (Fisherman's Wharf) ולראות אריות ים רובצים מתחת לרציפים.</p>
+                        <p>אחר הצהריים, חזרו לחלקה הקבועה שלכם בלגונה סקה למנגל ומנוחה.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </details>
+
+    <details class="day-card">
+        <summary>יום 4 (11/10): פוינט לובוס וכרמל 🌊</summary>
+        <div class="content">
+            <iframe class="google-map" src="https://maps.google.com/maps?saddr=Monterey,+CA&daddr=Point+Lobos,+CA+to:Carmel-by-the-Sea,+CA+to:Laguna+Seca,+CA&output=embed"></iframe>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">08:30</span> <span class="title">לוגיסטיקה: נסיעה ב-Uber</span></div>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>איך זה עובד?</h4>
+                        <p>שמורת פוינט לובוס אוסרת כניסה של רכבים מעל 21 רגל (הקראוון שלכם הוא כמעט 24). לכן, הפתרון הטוב ביותר: <strong>אל תזיזו את הקראוון בכלל.</strong> השאירו אותו מחובר בחלקה שלכם בלגונה סקה. הזמינו Uber או Lyft אל הקמפינג. קחו אתכם את הדונה של אריה, התקינו אותה במונית, וסעו לשמורה כמו VIP בלי דאגות חניה.</p>
+                        <h4>ליאו כלב השירות:</h4>
+                        <p>כלבים רגילים אינם מורשים בפוינט לובוס כדי לא להפריע לחיות הבר. כיוון שליאו הוא כלב שירות (ADA), הוא מורשה להיכנס. הלבישו לו את הווסט המזהה וודאו שמסמכי השירות והחיסונים עליכם.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">09:15</span> <span class="title">Point Lobos Reserve</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/z0S3n7X.jpg" alt="Point Lobos Reserve">
+                    <figcaption>Photo: Dcrjsr / CC BY 3.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>מה רואים בשמורה?</h4>
+                        <p>פוינט לובוס היא פנינת הטבע של האזור. מים בצבע טורקיז וסלעים משוננים. המסלולים המומלצים עבורכם (נגישים יחסית לעגלה):</p>
+                        <ul>
+                            <li><strong>Cypress Grove Trail:</strong> מסלול מעגלי קצר (כ-1.3 ק"מ) העובר דרך חורשת עצי ברוש נדירים שעוטפים אתכם בריח של יער ים תיכוני, ומגיע לתצפית על האוקיינוס.</li>
+                            <li><strong>Sea Lion Point:</strong> הליכה קצרצרה ממרגרש החניה שבה לרוב תשמעו ולעיתים גם תראו עשרות אריות ים רובצים על הסלעים. הביאו משקפת!</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">13:00</span> <span class="title">עיירת כרמל וחוף הים</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/4S0K1zU.jpg" alt="Carmel Beach">
+                    <figcaption>Photo: Christian Mehlführer / CC BY 2.5</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>ביקור בכרמל (Carmel-by-the-Sea)</h4>
+                        <p>לאחר שתחזרו מהשמורה ל-RV (באמצעות אובר חזור), תוכלו לנסוע לכרמל, המרוחקת רק 10 דקות נסיעה. כרמל היא עיירת בוטיק קטנה, ללא רמזורים, עם בתי אגדה (Fairy-tale cottages) ומסעדות מעולות לארוחת צהריים.</p>
+                        <div class="parking-tip">
+                            <strong>💡 חניה בכרמל:</strong> אל תיכנסו עם ה-RV לרחוב הראשי (Ocean Ave) העמוס. חפשו חניה ברחובות ההיקפיים (כמו אזור Rio Road) או סעו ישירות לחניון של <strong>Carmel Beach</strong> הנמצא לאורך Scenic Road, אם כי תצטרכו מזל כדי למצוא שטח גדול פנוי. עדיף לחנות במרחק 10 דקות הליכה ולרדת ברגל.
+                        </div>
+                        <h4>Carmel Beach</h4>
+                        <p>סיום מושלם ליום. בניגוד לשמורות, חוף כרמל מתיר לכלבים להתרוצץ חופשי ללא רצועה! החול לבן ורך, והנוף של עצי הברוש היורדים אל המים מרהיב.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </details>
+
+    <details class="day-card">
+        <summary>יום 5 (12/10): פראות ביג סר 🌉</summary>
+        <div class="content">
+            <iframe class="google-map" src="https://maps.google.com/maps?saddr=Laguna+Seca,+CA&daddr=Garrapata+State+Park,+CA+to:Hurricane+Point,+CA+to:Big+Sur,+CA&output=embed"></iframe>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">09:15</span> <span class="title">Garrapata State Park</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/Y3U72c5.jpg" alt="Garrapata Coast">
+                    <figcaption>Photo: Daderot / Public Domain</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>טבע פראי על הכביש</h4>
+                        <p>זהו פארק ללא שער כניסה רשמי, שמשתרע לאורך כביש 1. כאן רואים את הגלים האדירים של האוקיינוס השקט מתנפצים על מצוקים שחורים. </p>
+                        <div class="parking-tip">
+                            <strong>💡 איפה עוצרים?</strong> לאורך הכביש בפארק יש מפרצי עפר ממוספרים (Gates). חפשו את המפרצים הרחבים (למשל סביב Gate 18-19 לחוף, או Gate 8-10 לשבילי המצוק). פשוט רדו מהכביש, כבו מנוע ותספגו את האוויר. אפשר לרדת להליכה קצרה אם אין רוח חזקה מדי לאריה.
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">10:30</span> <span class="title">Hurricane Point (תצפית Bixby)</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/39lK9Q7.jpg" alt="Bixby Bridge">
+                    <figcaption>Photo: Daniel Schwen / CC BY-SA 4.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>הגשר המפורסם והמוקש הלוגיסטי</h4>
+                        <p>גשר קריק ביקסבי הוא סמלו של ביג סר. בעבר כולם עצרו בקרבתו, אך בעקבות עומסים הוחמרו חוקי החניה ונאסר לעצור בשני קצות הגשר (במיוחד מסוכן לקראוון עקב חוסר יכולת לבצע פניית פרסה).</p>
+                        <div class="parking-tip">
+                            <strong>💡 הפתרון המושלם:</strong> המשיכו לנסוע דרומה כ-2 ק"מ מעבר לגשר, עד שתגיעו למפרץ תצפית גדול ומוסדר בשם <strong>Hurricane Point Vista Point</strong>. המפרץ הזה מרווח, קל לחנות בו עם RV, והוא מספק תצפית אדירה של קו החוף כשהגשר משתלב בתוכו בצורה מושלמת לצילומים. 
+                        </div>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">12:30</span> <span class="title">ארוחת צהריים ב-Big Sur Valley</span></div>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>הפסקה ביער</h4>
+                        <p>לאחר שתמשיכו דרומה, הנוף משתנה ממצוקי ים ליערות עבותים. עצרו באזור Big Sur River Inn. תוכלו לאכול צהריים במסעדה (או ב-RV) ולתת לאריה להירגע באזור המוצל. לאחר מכן, לפני השעה 15:00, התחילו את הדרך חזרה צפונה לכיוון מונטריי כדי להימנע מנהיגת לילה בכביש המפותל.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </details>
+
+    <details class="day-card">
+        <summary>יום 6 (13/10): מצפינים לקפיטולה 🏖️</summary>
+        <div class="content">
+            <iframe class="google-map" src="https://maps.google.com/maps?saddr=Laguna+Seca,+CA&daddr=Moss+Landing,+CA+to:Capitola,+CA+to:Sunset+State+Beach,+CA&output=embed"></iframe>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">09:00</span> <span class="title">עוזבים את הבסיס</span></div>
+                <p>אורזים, מתנתקים מהתשתיות של לגונה סקה, ויוצאים לנסיעה קצרה צפונה לאורך מפרץ מונטריי.</p>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">10:00</span> <span class="title">לוטרות ב-Moss Landing</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/P4Wp2pQ.jpg" alt="Moss Landing Otters">
+                    <figcaption>Photo: Marshal Hedin / CC BY-SA 2.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>תצפית חיות בר</h4>
+                        <p>מוס לנדינג היא נקודה מושלמת על הדרך. זהו שפך נהר שבו מתרכזת אוכלוסיית עצומה של לוטרות ים (Sea Otters), כלבי ים ופלמינגו. </p>
+                        <div class="parking-tip">
+                            <strong>💡 חניה ותצפית:</strong> סעו לאזור <strong>Moss Landing State Beach</strong> או לחניון של <strong>Elkhorn Slough Safari</strong>. יש שם חניות עפר נוחות. רדו קצת למים ותראו עשרות לוטרות צפות על הגב, לעיתים מחזיקות את הגורים שלהן. חוויה נהדרת לאריה.
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">12:30</span> <span class="title">הכפר הקטן של קפיטולה (Capitola)</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/G4Y4Y0W.jpg" alt="Capitola">
+                    <figcaption>Photo: Eugene Zelenko / CC BY-SA 4.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>ריביירה קליפורנית</h4>
+                        <p>קפיטולה היא אחת מערי החוף הוותיקות בקליפורניה, מפורסמת בבתים הצבעוניים בסגנון ונציאני שנושקים לחול ולמים.</p>
+                        <div class="parking-tip">
+                            <strong>💡 איפה לא לחנות:</strong> אל תתפתו לרדת עם הקראוון אל מרכז הכפר (Capitola Village). הרחובות צרים להחריד ואין שם מקום להסתובב. <br>
+                            <strong>איפה כן לחנות:</strong> סעו לחניונים העליונים, כגון <strong>Beach and Village Parking Lot 2</strong> (ליד City Hall). אלו חניוני ענק עם מספיק מקום, ומשם תרדו ברגל או בשאטל חינמי אל החוף ואל המסעדות לארוחת צהריים.
+                        </div>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">16:00</span> <span class="title">קמפינג במצוק (Sunset/Pines Hollow)</span></div>
+                <p>התמקמות לחניית לילה. זהו Dry Camping, כך שתחוו לילה על בסיס מצברי הקראוון וגז, לקול גלי הים מלמטה.</p>
+            </div>
+        </div>
+    </details>
+
+    <details class="day-card">
+        <summary>יום 7 (14/10): עצי ענק ודלעות 🎃</summary>
+        <div class="content">
+            <iframe class="google-map" src="https://maps.google.com/maps?saddr=Sunset+State+Beach,+CA&daddr=Henry+Cowell+Redwoods+State+Park,+CA+to:Pastorino+Farms,+CA+to:Francis+Beach,+CA&output=embed"></iframe>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">09:30</span> <span class="title">Henry Cowell Redwoods</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/K3yZ8x9.jpg" alt="Redwoods">
+                    <figcaption>Photo: King of Hearts / CC BY-SA 4.0</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>היערות העתיקים</h4>
+                        <p>פארק עצי הרדווד הזה נגיש וקל בהרבה משאר שמורות העצים באזור. המסלול המרכזי <strong>Redwood Grove Loop</strong> אורך רק 1.2 ק"מ, הוא שטוח לחלוטין ומתאים לעגלה. תטיילו בין עצים המתנשאים לגובה של בניין בן 30 קומות שקוטרם עולה על רוחב מכונית.</p>
+                        <div class="parking-tip">
+                            <strong>💡 חניה וכלבים:</strong> יש מגרש חניה גדול ומוסדר בכניסה. זכרו: בעוד שחיות מחמד רגילות מוגבלות מאוד בשטח הפארק, ליאו (Service Dog) יכול לצעוד איתכם בכל מקום בשביל.
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">13:00</span> <span class="title">חוות דלעות (Pastorino / Lemos Farms)</span></div>
+                <figure>
+                    <img class="stop-image" src="https://i.imgur.com/V9X2V9p.jpg" alt="Pumpkin Patch">
+                    <figcaption>Photo: Leonard G. / Public Domain</figcaption>
+                </figure>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>פעילויות לפעוטות באווירת האלווין</h4>
+                        <p>העיירה האלף מון ביי מוכרת כ"בירת הדלעות העולמית". באמצע אוקטובר, החוות באזור (ובעיקר לאורך כביש 92) לובשות חג.</p>
+                        <ul>
+                            <li><strong>מה עושים?</strong> החוות מלאות בשדות דלעות כתומות עצומות (מושלם לתמונות), פינות חי, רכיבה על פוני, ונסיעה ברכבת טרקטור (Hayrides) שמתאימה מאוד לילדים קטנים. יש גם דוכני אוכל מתוק.</li>
+                        </ul>
+                        <div class="parking-tip">
+                            <strong>💡 טיפ חניה קריטי (מונע פקקים):</strong> עונת הדלעות יוצרת פקקי ענק באזור בשעות אחר הצהריים. לכן חשוב להגיע סביב 13:00. החניה בחוות היא לרוב על שדות עפר או דשא כבוש – סעו בזהירות עם ה-RV, הימנעו משטחים בוציים, וחנו בשוליים כדי שלא ייחסמו אתכם רכבים פרטיים.
+                        </div>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">17:00</span> <span class="title">לילה אחרון: Francis Beach</span></div>
+                <p>התמקמות בקמפינג האחרון בהאלף מון ביי. נצלו את הערב כדי להתחיל לסדר את ה-RV, לארוז את המזוודות לטיסה ולנקות את השאריות במקרר, כדי להפוך את הבוקר לקליל.</p>
+            </div>
+        </div>
+    </details>
+    
+    <details class="day-card">
+        <summary>יום 8 (15/10): הזדכות חזרה ✈️</summary>
+        <div class="content">
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">09:00</span> <span class="title">מנהלות (Dump ומילוי)</span></div>
+                <details class="info-box">
+                    <summary></summary>
+                    <div class="info-content">
+                        <h4>איך מרוקנים ומתארגנים?</h4>
+                        <p>לפני שמחזירים את הרכב ל-Roadsurfer, עליכם לבצע ריקון מכלים בתחנת Dump (אם לא שילמתם על ריקון מראש):</p>
+                        <ol>
+                            <li>חברו את צינור הביוב לפתח הריקון.</li>
+                            <li><strong>משכו קודם את הידית של המים השחורים (Black Water - שירותים).</strong> תנו למכל להתרוקן.</li>
+                            <li><strong>רק לאחר מכן, משכו את הידית של המים האפורים (Gray Water - מקלחת וכיור).</strong> המים האפורים ישטפו וינקו את הצינור בצורה טבעית.</li>
+                        </ol>
+                        <p>אל תשכחו למלא את מכל הדלק עד הסוף בתחנת דלק סמוכה לסן קרלוס.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="schedule-item">
+                <div class="time-block"><span class="clock">11:00</span> <span class="title">החזרה ונסיעה ל-SFO</span></div>
+                <p>הזדכות מהירה ונסיעה לשדה התעופה לטיסה הביתה.</p>
+            </div>
+        </div>
+    </details>
+
+    <h2 style="text-align: center; color: var(--secondary); margin-top: 30px;">📋 רשימת הצטיידות מדויקת (8/10)</h2>
+    <div class="subtitle">הסימונים נשמרים בזיכרון של הטלפון!</div>
+
+    <details class="day-card" open>
+        <summary>מזווה ומקרר (חישוב לשבוע לכולם)</summary>
+        <div class="content checklist-group">
+            <h3>ארוחות בוקר וקפה</h3>
+            <label class="check-item"><input type="checkbox" id="food-1"> <div><strong>ביצים</strong> <span class="qty">2 תבניות של 12 (24 ביצים סה"כ)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-2"> <div><strong>חלב</strong> <span class="qty">1.5 גלונים (לקפה ולאריה)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-3"> <div><strong>לחם חתוך</strong> <span class="qty">2 כיכרות גדולות (לבוקר ולסנדוויצ'ים)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-4"> <div><strong>קפה וסוכר</strong> <span class="qty">שקית אחת של קפה טחון + קופסת סוכר קטנה</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-5"> <div><strong>חמאה / גבינת שמנת</strong> <span class="qty">חבילה אחת מכל סוג</span></div></label>
+            
+            <h3>ארוחות צהריים (סנדוויצ'ים וסלטים)</h3>
+            <label class="check-item"><input type="checkbox" id="food-6"> <div><strong>נקניק פרוס (פסטרמה/הודו)</strong> <span class="qty">2-3 חבילות קטנות</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-7"> <div><strong>גבינה צהובה פרוסה</strong> <span class="qty">2 חבילות</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-8"> <div><strong>ירקות קשים</strong> <span class="qty">6 עגבניות, 6 מלפפונים, 4 אבוקדו, שקית גזר גמדי</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-9"> <div><strong>טורטיות (Wraps)</strong> <span class="qty">2 חבילות (נשמרות טוב יותר מלחם)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-10"> <div><strong>מיונז וחרדל</strong> <span class="qty">בקבוקים לחיצים קטנים</span></div></label>
+
+            <h3>ארוחות ערב (בישול ב-RV ועל האש)</h3>
+            <label class="check-item"><input type="checkbox" id="food-11"> <div><strong>פסטה</strong> <span class="qty">3 חבילות (פנה או ספגטי)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-12"> <div><strong>רוטב עגבניות</strong> <span class="qty">2 צנצנות זכוכית גדולות</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-13"> <div><strong>בשר טחון (לטאקו/בולונז)</strong> <span class="qty">2 פאונד (כ-1 ק"ג)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-14"> <div><strong>חזה עוף / פרגיות</strong> <span class="qty">3 פאונד (כ-1.5 ק"ג) חלוקה למנות במקרר</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-15"> <div><strong>נקניקיות או המבורגרים</strong> <span class="qty">2 חבילות קפואות (לימי המנגל)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-16"> <div><strong>תפוחי אדמה</strong> <span class="qty">שק קטן של 5 פאונד (לעטוף בנייר כסף במדורה)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-17"> <div><strong>תבלינים, מלח, פלפל, ספריי שמן</strong> <span class="qty">מארזים קטנים</span></div></label>
+
+            <h3>שתייה ופינוקים</h3>
+            <label class="check-item"><input type="checkbox" id="food-18"> <div><strong>מים מינרלים</strong> <span class="qty">4-5 גלונים גדולים (לא שותים מהברז בקראוון!)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-19"> <div><strong>בירות ויין</strong> <span class="qty">שישייה + 2-3 בקבוקי יין (זול מאוד בוולמארט)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="food-20"> <div><strong>פירות לאריה</strong> <span class="qty">2 אשכולות בננות, שתי קופסאות אוכמניות/תותים</span></div></label>
+        </div>
+    </details>
+
+    <details class="day-card" open>
+        <summary>ציוד, ניקיון וכלבים 🐕</summary>
+        <div class="content checklist-group">
+            <h3>תחזוקת ה-RV</h3>
+            <label class="check-item"><input type="checkbox" id="gear-1"> <div><strong>נייר טואלט RV</strong> <span class="qty">מארז של 4 גלילים מתפרקים (חובה!)</span></div></label>
+            <label class="check-item"><input type="checkbox" id="gear-2"> <div><strong>נייר סופג וסבון כלים</strong> <span class="qty">3 גלילים + בקבוק סבון + 2 ספוגים</span></div></label>
+            <label class="check-item"><input type="checkbox" id="gear-3"> <div><strong>שקיות זבל וזיפלוק</strong> <span class="qty">קופסת שקיות ענק + חבילת שקיות אטומות למקרר</span></div></label>
+            <label class="check-item"><input type="checkbox" id="gear-4"> <div><strong>פחמים וחומר הדלקה</strong> <span class="qty">שק אחד של 8 פאונד (למנגל בחניונים המאושרים) + מצית ארוך</span></div></label>
+
+            <h3>שינה ומקלחת (להשלים בוולמארט)</h3>
+            <label class="check-item"><input type="checkbox" id="gear-5"> <div><strong>כריות ומצעים</strong> <span class="qty">4 כריות פשוטות, 2 סדינים, 2 שמיכות חמות</span></div></label>
+            <label class="check-item"><input type="checkbox" id="gear-6"> <div><strong>מגבות ושטיחון</strong> <span class="qty">4 מגבות גוף + שטיח רצפה קטן לאמבטיה</span></div></label>
+
+            <h3>הילדים (אריה וליאו)</h3>
+            <label class="check-item"><input type="checkbox" id="gear-7"> <div><strong>חיתולים ומגבונים</strong> <span class="qty">אריזת חיתולים אחת + 3 חבילות מגבונים</span></div></label>
+            <label class="check-item"><input type="checkbox" id="gear-8"> <div><strong>אוכל לליאו</strong> <span class="qty">שק של 8 פאונד (יספיק לשבוע) + גליל שקיות קקי</span></div></label>
+            <label class="check-item"><input type="checkbox" id="gear-9"> <div><strong>תעודות לליאו מהבית</strong> <span class="qty">פנקס חיסונים/כלבת + וסט כלב שירות</span></div></label>
+        </div>
+    </details>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(box => {
+                const savedState = localStorage.getItem(box.id);
+                if (savedState === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
